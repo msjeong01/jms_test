@@ -1,0 +1,26 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/opt/ros/noetic/include/**",
+        "/home/syscon/catkin_ws/devel/include/**",
+        "/home/syscon/catkin_ws/src/study_git/assign01/include/**",
+        "/home/syscon/catkin_ws/src/study_git/assign02/include/**",
+        "/home/syscon/catkin_ws/src/waypoints_global_path_planner/log_inverter/include/**",
+        "/home/syscon/catkin_ws/src/waypoints_global_path_planner/waypoints_global_path_planner/include/**",
+        "/home/syscon/catkin_ws/src/waypoints_global_path_planner/waypoints_visualize/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

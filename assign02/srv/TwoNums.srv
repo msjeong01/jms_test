@@ -1,0 +1,5 @@
+float64 num1
+float64 num2
+string oper
+---
+float64 result
