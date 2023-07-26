@@ -10,7 +10,6 @@
      - node name: publisher, subsriber
      - topic name: message
       
-
   2. Assign 2 [linlk](https://www.notion.so/sysconresearch/Assign2_service-with-trigger-6bae57aa8078488c806031ef00d7fc8e)
      - duration: 2023.07.19(Wed)~07.21(Fri)
      - environment: ROS1(noetic), Ubuntu 20.04
