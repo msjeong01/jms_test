@@ -2,12 +2,12 @@
 
 #### System part assignment with manager HaeJin Kim
    1. Assign 1 [link](https://www.notion.so/sysconresearch/Assign1_pub-sub-0be098e3f7874cc6bb7725537804cc9c)
-   - duration: 2023.07.14(Fri)~07.19(Wed)
-   - environment: ROS1(noetic), Ubuntu 20.04
-   - concept: Make ros publisher and subscriber package.
-              Publisher period is 0.1s and it has to count publish period. Subscriber period of subscribing and sleep is 1s and it has to receive topic and count number from publisher node
-   - node name: publisher, subsriber
-   - topic name: message
+      - duration: 2023.07.14(Fri)~07.19(Wed)
+      - environment: ROS1(noetic), Ubuntu 20.04
+      - concept: Make ros publisher and subscriber package.
+                 Publisher period is 0.1s and it has to count publish period. Subscriber period of subscribing and sleep is 1s and it has to receive topic and count number from publisher node
+      - node name: publisher, subsriber
+      - topic name: message
    
   2. Assign 2 [link](https://www.notion.so/sysconresearch/Assign2_service-with-trigger-6bae57aa8078488c806031ef00d7fc8e)
      - duration: 2023.07.19(Wed)~07.21(Fri)
