@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 # JMS_Simulation_Robot (JSR)
 ### Minseo Jeong Making_Your_Simulation_Robot(MYSR)
 
@@ -28,3 +29,37 @@
 
 **5. Mission Command** [참고](https://www.notion.so/sysconresearch/5-Mission-Command-9aa18ef95f3944378efca67093f05201?pvs=4)
 
+=======
+### Minseo Jeong git repository
+
+#### System part assignment with manager HaeJin Kim
+   1. Assign 1 [link](https://www.notion.so/sysconresearch/Assign1_pub-sub-0be098e3f7874cc6bb7725537804cc9c)
+      - Duration: 2023.07.14(Fri)~07.19(Wed)
+      - Environment: ROS1(noetic), Ubuntu 20.04
+      - Concept: Make ros publisher and subscriber package.   
+                 Publisher period is 0.1s and it has to count publish period. Subscriber period of subscribing and sleep is 1s and it has to receive topic and count number from publisher node
+      - Node name: publisher, subsriber
+      - Topic name: message
+   
+  2. Assign 2 [link](https://www.notion.so/sysconresearch/Assign2_service-with-trigger-6bae57aa8078488c806031ef00d7fc8e)
+     - Duration: 2023.07.19(Wed)~07.21(Fri)
+     - Environment: ROS1(noetic), Ubuntu 20.04
+     - Concept: Make ros calculator service node using trigger service type.   
+                We can input two numbers and four operator(+,-,/,*). If input two numbers and one of the operator, service node calculates the value and shows result when trigger service was sent and its status is true.
+     - Node name: server
+     - Service name: calculate, trigger_check
+       
+  3. Robot simulation  
+     3-1. Turtlebot3 simulation [link](https://www.notion.so/sysconresearch/Turtlebot3-3-Ubuntu-20-04-noetic-50ea8f64a5144074bd6aa0e3b3e8408d)
+     - Duration: 2023.07.24(Mon)~08.31(Thu)
+     - Environment: ROS1(noetic), Ubuntu 20.04
+     - Concept: Make personal Turtlebot3 simulation   
+                It must be applied teleop, nav goal, mapping
+     - Goal: Learn and think how to make mobile robot in ros simulation(gazebo, rviz) system and what is needed to make own mobile robot simulation.   
+  
+      3-2. Mobile Robot simulation
+      - Duration: 2023.09.01(Fri)~10.31(Tue)
+      - Environment: ROS1(noetic), Ubuntu 20.04
+         
+         
+>>>>>>> Stashed changes
