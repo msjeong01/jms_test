@@ -11,9 +11,9 @@
       4. [SLAM(Mapping + Navigation)](https://www.notion.so/sysconresearch/4-SLAM-Mapping-Navigation-605ea983137e410c82320961afe61196?pvs=4)
       5. [Mission Command](https://www.notion.so/sysconresearch/5-Mission-Command-9aa18ef95f3944378efca67093f05201?pvs=4)
 
------------------------------------------
+--------------------------
 
-1. Turtlebot3 Simulation [개인 페이지 link](https://www.notion.so/sysconresearch/Assign3_Robot-simulation-1-e0c62e254a2e4a6c885b16e239e11809)
+1. Turtlebot3 Simulation [개인 페이지 link][def]
    - 기간: 2023.07.25(Fri)~08.10(Wed)
    - 개요: 터틀봇3 시뮬레이션인 Gazebo, SLAM, Navigation 체험
           각 시뮬레이션의 노드 및 패키지 구성 방법 파악
@@ -26,3 +26,6 @@
 3. teleop & sim world   
 4. SLAM(Mapping + Navigation)
 5. Mission Command
+
+
+[def]: https://www.notion.so/sysconresearch/Assign3_Robot-simulation-1-e0c62e254a2e4a6c885b16e239e11809
