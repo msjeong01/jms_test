@@ -13,7 +13,7 @@
 
 --------------------------
 
-1. Turtlebot3 Simulation [개인 페이지 link][https://www.notion.so/sysconresearch/Assign3_Robot-simulation-1-e0c62e254a2e4a6c885b16e239e11809]
+1. Turtlebot3 Simulation [개인 페이지 link](https://www.notion.so/sysconresearch/Assign3_Robot-simulation-1-e0c62e254a2e4a6c885b16e239e11809)
    - 기간: 2023.07.25(Fri)~08.10(Wed)
    - 개요: 터틀봇3 시뮬레이션인 Gazebo, SLAM, Navigation 체험
           각 시뮬레이션의 노드 및 패키지 구성 방법 파악
