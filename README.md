@@ -1,11 +1,11 @@
 # JMS_simulation_robot (MYSR)
-### > Minseo Jeong Making_Your_Simulation_Robot(MYSR)
+### Minseo Jeong Making_Your_Simulation_Robot(MYSR)
 
-#### System part 최종 프로젝트: 시뮬레이션 로봇 [link](https://www.notion.so/sysconresearch/7fc4a65881794b37a0d292a61730601c?pvs=4)
-    - 개발 환경: ROS1(noetic), Ubuntu 20.04
-    - 기간: 2023.07.24(월)~10.31(화)
-    - Road Map
-      1. [Turtlebot3 Simulation](**https**://www.notion.so/sysconresearch/1-Turtlebot3-Simulation-3a285c942cf04044aa7b8403d6742802?pvs=4)
+#### System part 최종 프로젝트: [시뮬레이션 로봇](https://www.notion.so/sysconresearch/7fc4a65881794b37a0d292a61730601c?pvs=4)
+    - **개발 환경**: ROS1(noetic), Ubuntu 20.04
+    - **기간**: 2023.07.24(월)~10.31(화)
+    - **Road Map**
+      1. [Turtlebot3 Simulation](https://www.notion.so/sysconresearch/1-Turtlebot3-Simulation-3a285c942cf04044aa7b8403d6742802?pvs=4)
       2. [Robot model 구성(URDF & xacro)](https://www.notion.so/sysconresearch/2-Robot-model-URDF-xacro-1ba0466ff7e641fc87c1683a30ad597e?pvs=4)
       3. [teleop & sim world](https://www.notion.so/sysconresearch/3-teleop-sim-world-478a78464d0143e386a7677b94a65f45?pvs=4)
       4. [SLAM(Mapping + Navigation)](https://www.notion.so/sysconresearch/4-SLAM-Mapping-Navigation-605ea983137e410c82320961afe61196?pvs=4)
