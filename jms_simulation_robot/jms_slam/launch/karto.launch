@@ -1,0 +1,10 @@
+<launch>
+    <!-- Arguments -->
+    <arg name="model" default="$(find jms_simulation_robot)/urdf/robot_rviz.urdf.xacro" />
+    <arg name="configuration_basename" default="turtlebot3_lds_2d.lua"/>
+
+    <!-- slam_karto -->
+    <node pkg="slam_karto" type="slam_karto" name="slam_karto" output="screen">
+        <rosparam command="load" file="$(find jms_simulation_robt)/jms_slam/config/karto_mapper_params.yaml" />
+    </node>
+</launch>

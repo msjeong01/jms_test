@@ -1,0 +1,4 @@
+<launch>
+    <!-- <node pkg="biibiii_teleop" type="teleop_key.py" name="teleop_keyboard" output="screen" /> -->
+    <node pkg="biibiii_teleop" type="test_teleop_key.py" name="teleop_keyboard" output="screen" />
+</launch>
