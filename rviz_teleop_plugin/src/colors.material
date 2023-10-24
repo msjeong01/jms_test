@@ -1,0 +1,36 @@
+material Yellow
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            diffuse 1 1 0 1
+        }
+    }
+}
+
+
+material Red
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            diffuse 1 0 0 1
+        }
+    }
+}
+
+material Grey
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            diffuse 0.8 0.8 0.8 1
+        }
+    }
+}

@@ -1,0 +1,5 @@
+# Move to Path service request
+int32 start_point   # Starting point
+int32 end_point     # Ending point
+---
+bool success        # True if the robot successfully moves to the path
