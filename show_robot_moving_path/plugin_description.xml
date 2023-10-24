@@ -1,9 +1,0 @@
-<library path="lib/libshow_robot_moving_path">
-  <class name="show_robot_moving_path/MarkingPathAndTeleop"
-         type="show_robot_moving_path::MarkingPathAndTeleop"
-         base_class_type="rviz::Panel">
-    <description>
-      A rviz panel that markig moving path of robot and controlling the robot position and velocity.
-    </description>
-  </class>
-</library>
