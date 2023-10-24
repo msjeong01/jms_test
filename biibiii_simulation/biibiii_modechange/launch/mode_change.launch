@@ -1,3 +1,0 @@
-<launch>
-    <node pkg = "biibiii_modechange" type="mode_change.cpp" name="mode_change_server" output="screen" />
-</launch>
