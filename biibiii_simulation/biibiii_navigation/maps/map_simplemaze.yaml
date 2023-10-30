@@ -1,4 +1,4 @@
-image: /home/syscon/map_simplemaze.pgm
+image: /home/syscon/catkin_ws/jms_test/etc/map_simplemaze.pgm
 resolution: 0.050000
 origin: [-4.566399, -5.629380, 0.000000]
 negate: 0

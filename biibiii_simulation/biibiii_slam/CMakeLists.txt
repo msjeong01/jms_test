@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.0.2)
 project(biibiii_slam)
 
 find_package(catkin REQUIRED COMPONENTS
-  cartographer_ros_msgs
+  # cartographer_ros_msgs
   roscpp
   rospy
   sensor_msgs
@@ -11,7 +11,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
   INCLUDE_DIRS include
 #  LIBRARIES biibiii_slam
-  CATKIN_DEPENDS cartographer_ros_msgs roscpp rospy sensor_msgs
+  # CATKIN_DEPENDS cartographer_ros_msgs roscpp rospy sensor_msgs
 #  DEPENDS system_lib
 )
 
@@ -37,6 +37,6 @@ install(DIRECTORY include/${PROJECT_NAME}/
   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
 )
 
-install(DIRECTORY bag config launch rviz
+install(DIRECTORY config launch rviz
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )

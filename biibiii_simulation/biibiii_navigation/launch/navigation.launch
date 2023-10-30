@@ -26,8 +26,8 @@
 
     <!-- rviz -->
     <group if="$(arg open_rviz)">
-        <node pkg="rviz" type="rviz" name="rviz" required="true"
-            args="-d $(find biibiii_navigation)/rviz/test_navigation.rviz" />
+        <node pkg="rviz" type="rviz" name="rviz" required="true" />
+            <!-- args="-d $(find biibiii_navigation)/rviz/test_navigation.rviz" /> -->
     </group>
 
 </launch>
