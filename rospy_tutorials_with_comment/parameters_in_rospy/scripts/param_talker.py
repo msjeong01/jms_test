@@ -10,15 +10,15 @@ def param_talker():
     rospy.init_node('param_talker')
 
     # fetch a /global parameter
-    global_example = rospy.get_param("/global_example")
+    global_example = rospy.get_param("/global_example")     # get a global parameter
     rospy.loginfo("%s is %s", rospy.resolve_name('/global_example'), global_example)
 
     # fetch the utterance parameter from our parent namespace
-    utterance = rospy.get_param('utterance')
+    utterance = rospy.get_param('utterance')    # get a parameter from our parent namespace
     rospy.loginfo("%s is %s", rospy.resolve_name('utterance'), utterance)
 
     # fetch topic_name from the ~private namespace
-    topic_name = rospy.get_param('~topic_name')
+    topic_name = rospy.get_param('~topic_name')     # get a parameter from our private namespace
     rospy.loginfo("%s is %s", rospy.resolve_name('~topic_name'), topic_name)
 
     # fetch a parameter, using 'default_valuer' if it doesn't exist

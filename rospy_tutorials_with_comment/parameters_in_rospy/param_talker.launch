@@ -1,0 +1,34 @@
+<launch>
+    <param name="global_example" value="global value" />
+
+    <group ns = "foo">
+        <param name="utterance" value="Hello World" />
+        <param name="to_delete" value="Delete Me" />
+
+        <group ns = "gains">
+            <param name="P" value="1.0" />
+            <param name="I" value="2.0" />
+            <param name="D" value="3.0" />
+        </group>
+
+        <node pkg="parameters_in_rospy" name="param_talker" type="param_talker.py" output="screen">
+            <param name="topic_name" value="chatter" />
+        </node>
+    </group>
+
+</launch>
+
+<!-- result
+process[foo/param_talker-2]: started with pid [133205]
+[INFO] [1698746971.012738]: /global_example is global value
+[INFO] [1698746971.014931]: /foo/utterance is Hello World
+[INFO] [1698746971.017024]: /foo/param_talker/topic_name is chatter
+[INFO] [1698746971.019006]: /foo/default_param is default_value
+[INFO] [1698746971.021131]: gains are 1.0 2.0 3.0
+[INFO] [1698746971.022160]: setting parameters...
+[INFO] [1698746971.026159]: ...parameters have been set
+[INFO] [1698746971.028250]: deleted /foo/to_delete parameter
+[INFO] [1698746971.029637]: found global_example parameter under key: /global_example
+[INFO] [1698746971.031063]: Hello World
+[INFO] [1698746978.072107]: Hello World
+[foo/param_talker-2] killing on exit -->
