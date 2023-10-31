@@ -21,7 +21,7 @@ def param_talker():
     topic_name = rospy.get_param('~topic_name')     # get a parameter from our private namespace
     rospy.loginfo("%s is %s", rospy.resolve_name('~topic_name'), topic_name)
 
-    # fetch a parameter, using 'default_valuer' if it doesn't exist
+    # fetch a parameter, using 'default_value' if it doesn't exist
     default_param = rospy.get_param('default_param', 'default_value')
     rospy.loginfo('%s is %s', rospy.resolve_name('default_param'), default_param)
 
@@ -29,6 +29,7 @@ def param_talker():
     gains = rospy.get_param('gains')
     p, i, d = gains['P'], gains['I'], gains['D']
     rospy.loginfo("gains are %s %s %s", p, i, d)
+    rospy.loginfo("check slash: %s is %s", rospy.resolve_name('P'), p)
 
     # set some parameters
     rospy.loginfo('setting parameters...')
@@ -47,7 +48,7 @@ def param_talker():
 
     # search for a parameter
     param_name = rospy.search_param('global_example')
-    rospy.loginfo('found global_example parameter under key: %s'%param_name)
+    rospy.loginfo('found global_example parameter under key: %s' %param_name)
 
     # publish the value of utterance repeatedly
     pub = rospy.Publisher(topic_name, String, queue_size=10)
