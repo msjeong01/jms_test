@@ -3,7 +3,7 @@
 ### Branch
 
 - `main`
-- `assign`
+- `assign` ← **done**
   - topic: 1st and 2nd assignment of system part
   - duration: 2023.7.14(Fri) ~ 7.21(Fri)
   - concept: make pub-sub(1st) and service with trigger(2nd)
