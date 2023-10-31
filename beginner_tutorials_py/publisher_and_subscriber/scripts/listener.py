@@ -7,8 +7,8 @@ def callback(data):
 
 def listener():
     rospy.init_node('listener', anonymous=True)
-    rospy.Subscriber("chatter", String, callback)   # when ndw messages are received, callback is invoked with the message asthe first argumente
-
+    rospy.Subscriber("chatter", String, callback)   # when new messages are received
+                                                    # callback is invoked with the message as the first argument
     rospy.spin()
 
 if __name__ == '__main__':
