@@ -19,16 +19,16 @@
 </launch>
 
 <!-- result
-process[foo/param_talker-2]: started with pid [133205]
-[INFO] [1698746971.012738]: /global_example is global value
-[INFO] [1698746971.014931]: /foo/utterance is Hello World
-[INFO] [1698746971.017024]: /foo/param_talker/topic_name is chatter
-[INFO] [1698746971.019006]: /foo/default_param is default_value
-[INFO] [1698746971.021131]: gains are 1.0 2.0 3.0
-[INFO] [1698746971.022160]: setting parameters...
-[INFO] [1698746971.026159]: ...parameters have been set
-[INFO] [1698746971.028250]: deleted /foo/to_delete parameter
-[INFO] [1698746971.029637]: found global_example parameter under key: /global_example
-[INFO] [1698746971.031063]: Hello World
-[INFO] [1698746978.072107]: Hello World
+[INFO] [1698747722.069772]: /global_example is global value
+[INFO] [1698747722.071204]: /foo/utterance is Hello World
+[INFO] [1698747722.072506]: /foo/param_talker/topic_name is chatter
+[INFO] [1698747722.073455]: /foo/default_param is default_value
+[INFO] [1698747722.074360]: gains are 1.0 2.0 3.0
+[INFO] [1698747722.075043]: check slash: /foo/P is 1.0
+[INFO] [1698747722.075616]: setting parameters...
+[INFO] [1698747722.077547]: ...parameters have been set
+[INFO] [1698747722.078746]: deleted /foo/to_delete parameter
+[INFO] [1698747722.079608]: found global_example parameter under key: /global_example
+[INFO] [1698747722.080423]: Hello World
+[INFO] [1698747723.082538]: Hello World
 [foo/param_talker-2] killing on exit -->
