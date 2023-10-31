@@ -17,7 +17,7 @@ int main(int argc, char **argv)
         std_msgs::String msg;
         std::stringstream ss;
         ss << "hello world" << count;
-        msg.data = ss.str()
+        msg.data = ss.str();
 
         ROS_INFO("%S", msg.data.c_str());
 
@@ -27,5 +27,5 @@ int main(int argc, char **argv)
         loop_rate.sleep();
         ++count;
     }
-    
+
 }
