@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>publisher_and_subscriber</name>
+  <name>cpp_publisher_and_subscriber</name>
   <version>0.0.0</version>
-  <description>The publisher_and_subscriber package</description>
+  <description>The cpp_publisher_and_subscriber package</description>
 
   <maintainer email="syscon@todo.todo">syscon</maintainer>
   <license>TODO</license>

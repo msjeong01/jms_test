@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>service_and_client</name>
+  <name>cpp_service_and_client</name>
   <version>0.0.0</version>
-  <description>The service_and_client package</description>
+  <description>The cpp_service_and_client package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->

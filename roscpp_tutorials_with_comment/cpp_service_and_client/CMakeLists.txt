@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(service_and_client)
+project(cpp_service_and_client)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -105,7 +105,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES service_and_client
+#  LIBRARIES cpp_service_and_client
 #  CATKIN_DEPENDS message_generation roscpp rospy std_msgs
 #  DEPENDS system_lib
 )

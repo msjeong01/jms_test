@@ -1,0 +1,31 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/syscon/catkin_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/syscon/catkin_ws/src/gazebo_ros_pkgs/gazebo_plugins/include/**",
+        "/home/syscon/catkin_ws/src/gazebo_ros_pkgs/gazebo_ros/include/**",
+        "/home/syscon/catkin_ws/src/gazebo_ros_pkgs/gazebo_ros_control/include/**",
+        "/home/syscon/catkin_ws/src/waypoints_global_path_planner/log_inverter/include/**",
+        "/home/syscon/catkin_ws/src/myworkcell_core/include/**",
+        "/home/syscon/catkin_ws/src/jms_test/rospy_tutorials_with_comment/parameters_in_rospy/include/**",
+        "/home/syscon/catkin_ws/src/jms_test/roscpp_tutorials_with_comment/cpp_publisher_and_subscriber/include/**",
+        "/home/syscon/catkin_ws/src/jms_test/roscpp_tutorials_with_comment/cpp_service_and_client/include/**",
+        "/home/syscon/catkin_ws/src/waypoints_global_path_planner/waypoints_global_path_planner/include/**",
+        "/home/syscon/catkin_ws/src/waypoints_global_path_planner/waypoints_visualize/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
