@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<robot name="biibiii"
+    xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <!-- Robot base value-->
+    <xacro:property name="base_width" value="0.60" />
+    <!-- <xacro:property name="base_length" value="0.60" /> -->
+    <xacro:property name="base_length" value="0.40" />
+    <xacro:property name="base_height" value="0.15" />
+
+    <!-- Robot wheels value-->
+    <xacro:property name="wheel_radius" value="${base_height/2}" />
+    <xacro:property name="wheel_width" value="${wheel_radius/3}" />
+
+    <!-- Gap between base and wheels-->
+    <!-- <xacro:property name="wheel_ygap" value="${wheel_width}" /> -->
+    <!-- <xacro:property name="wheel_ygap" value="${wheel_width-(base_width-base_length)/2}" /> -->
+    <xacro:property name="wheel_ygap" value="${wheel_width-0.11}" />
+
+    <!-- Position the wheels along the x- axis and z-axis -->
+    <xacro:property name="wheel_xoff" value="0" />
+    <!-- <xacro:property name="wheel_xoff" value="${-base_width/8}" /> -->
+
+    <xacro:property name="wheel_zoff" value="${base_height/4}" />
+
+    <!--lidar value-->
+    <xacro:property name="lidar_height" value="${base_height/3}" />
+    <xacro:property name="lidar_radius" value="${lidar_height/2}" />
+
+    <!-- <xacro:property name="caster_radius" value="${wheel_zoff}" /> -->
+    <xacro:property name="caster_radius" value="${wheel_radius}" />
+
+
+    <!-- camera value-->
+    <xacro:property name="camera_width" value="0.1" />
+    <xacro:property name="camera_length" value="0.1" />
+    <xacro:property name="camera_height" value="0.02" />
+
+    <xacro:property name="r200_cam_rgb_px" value="0.005"/>
+    <xacro:property name="r200_cam_rgb_py" value="0.018"/>
+    <xacro:property name="r200_cam_rgb_pz" value="0.013"/>
+    <xacro:property name="r200_cam_depth_offset" value="0.01"/>
+
+
+    <!-- Define intertial property macros  -->
+    <xacro:macro name="box_inertia" params="m w h d">
+        <inertial>
+            <origin xyz="0 0 0" rpy="${pi/2} 0 ${pi/2}"/>
+            <mass value="${m}"/>
+            <inertia ixx="${(m/12) * (h*h + d*d)}" ixy="0.0" ixz="0.0" iyy="${(m/12) * (w*w + d*d)}" iyz="0.0" izz="${(m/12) * (w*w + h*h)}"/>
+        </inertial>
+    </xacro:macro>
+
+    <xacro:macro name="cylinder_inertia" params="m r h">
+        <inertial>
+            <origin xyz="0.0 0.0 0.0" rpy="${pi/2} 0.0 ${pi/2}"/>
+            <mass value="${m}"/>
+            <inertia ixx="${(m/12) * (3*r*r + h*h)}" ixy = "0" ixz = "0" iyy="${(m/12) * (3*r*r + h*h)}" iyz = "0" izz="${(m/2) * (r*r)}"/>
+        </inertial>
+    </xacro:macro>
+
+    <xacro:macro name="sphere_inertia" params="m r">
+        <inertial>
+            <mass value="${m}"/>
+            <inertia ixx="${(2/5) * m * (r*r)}" ixy="0.0" ixz="0.0" iyy="${(2/5) * m * (r*r)}" iyz="0.0" izz="${(2/5) * m * (r*r)}"/>
+        </inertial>
+    </xacro:macro>
+
+</robot>

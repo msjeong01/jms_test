@@ -1,0 +1,12 @@
+<!-- Launch robot simulation for Gazebo -->
+<launch>
+    <param name="robot_description" command="$(find xacro)/xacro $(find biibiii_description)/urdf/robot.urdf.xacro" />
+
+    <node name="robot_spawn" pkg="gazebo_ros" type="spawn_model" output="screen"
+          args="-urdf -param robot_description -model biibiii" />
+
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="use_sim_time" value="true" />
+    </include>
+
+</launch>

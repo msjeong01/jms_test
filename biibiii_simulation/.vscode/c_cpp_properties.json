@@ -1,0 +1,29 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "${default}",
+                "limitSymbolsToIncludedHeaders": false
+            },
+            "includePath": [
+                "/home/syscon/catkin_ws/install_isolated/include/**",
+                "/home/syscon/catkin_ws/devel_isolated/syscon_msgs/include/**",
+                "/home/syscon/catkin_ws/devel_isolated/gazebo_plugins/include/**",
+                "/home/syscon/catkin_ws/devel_isolated/gazebo_ros/include/**",
+                "/home/syscon/catkin_ws/devel_isolated/gazebo_msgs/include/**",
+                "/home/syscon/catkin_ws/devel_isolated/fkie_multimaster_msgs/include/**",
+                "/home/syscon/catkin_ws/devel_isolated/cartographer_ros_msgs/include/**",
+                "/home/syscon/catkin_ws/devel_isolated/cartographer/include/**",
+                "/opt/ros/noetic/include/**",
+                "/usr/include/**"
+            ],
+            "name": "ROS",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu11",
+            "cppStandard": "c++14",
+            "configurationProvider": "b2.catkin_tools"
+        }
+    ],
+    "version": 4
+}
