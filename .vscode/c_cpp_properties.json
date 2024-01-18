@@ -1,0 +1,30 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/syscon/catkin_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/syscon/catkin_ws/src/jms_test/biibiii_simulation/biibiii_slam/include/**",
+        "/home/syscon/catkin_ws/src/cmakelists_test/include/**",
+        "/home/syscon/catkin_ws/src/gazebo_ros_pkgs/gazebo_plugins/include/**",
+        "/home/syscon/catkin_ws/src/gazebo_ros_pkgs/gazebo_ros/include/**",
+        "/home/syscon/catkin_ws/src/gazebo_ros_pkgs/gazebo_ros_control/include/**",
+        "/home/syscon/catkin_ws/src/waypoints_global_path_planner/log_inverter/include/**",
+        "/home/syscon/catkin_ws/src/myworkcell_core/include/**",
+        "/home/syscon/catkin_ws/src/waypoints_global_path_planner/waypoints_global_path_planner/include/**",
+        "/home/syscon/catkin_ws/src/waypoints_global_path_planner/waypoints_visualize/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
