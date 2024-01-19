@@ -1,0 +1,44 @@
+## 0.1.0 (1월 19, 2024)
+  - Add bump-version.sh
+  - add
+  - Merge branch 'feature' into develop
+  - Featue commit
+  - delete previous vscode folder
+  - delete previous vscode folder
+  - update README
+  - add imgs
+  - mkdir img
+  - change README
+  - add word, done
+  - update README
+  - add img folder
+  - modify README.md
+  - modify navigation.launch and delete test.launch
+  - remove cartographer
+  - remove rvie_teleop_plugin
+  - remove plugin pkg
+  - remove assign files
+  - remove assign folders
+  - add packages
+  - Update README.md
+  - remove test.cpp
+  - Update README.md
+  - Update README.md
+  - Update README.md
+  - Update README.md
+  - Update README.md
+  - Update README.md
+  - Update README.md
+  - Update README.md
+  - Update README.md
+  - executor test code
+  - Update README.md
+  - Update README.md
+  - Update README.md
+  - Update README.md
+  - assign02
+  - automation input token
+  - change pkg name
+  - assgin01 complete
+  - Initial commit
+
