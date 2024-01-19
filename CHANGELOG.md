@@ -1,3 +1,6 @@
+## 0.1.1 (1월 19, 2024)
+  - Merge branch 'release-0.1.0' into main
+
 ## 0.1.0 (1월 19, 2024)
   - Add bump-version.sh
   - add
