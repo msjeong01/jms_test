@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ## Minseo Jeong git repository
 
 ### Description of Branches
@@ -104,4 +103,3 @@
    - **etc**: maps, some files etc..
    - **jms_simulation_robot**: Initial pkg of this project
    - **cf.** Notion: [[9월 세미나]시뮬레이션 로봇 구성](https://www.notion.so/sysconresearch/9-9ff409ca82804537bc1df02048e6c800?pvs=4)
->>>>>>> release-0.1.0
