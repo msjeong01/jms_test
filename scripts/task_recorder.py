@@ -67,22 +67,23 @@ class TaskRecorder:
         """
         if not self.is_enable: return False
         def run():
-            try:
-                success = True
-                resp = self.call_save_action()
-                if resp == None or not resp.success : success = False
-                else:
-                    save_file = resp.message.split(":")[-1].replace(" ","").split(".tar")[0]+".tar.gz"
-                    ### move from bag_packing to PATH_ABORT
-                    source_file = "%s/%s"%(PATH_BAG_PACKING_SAVE,save_file)
-                    # destination_file_name = "%s_%s_%s_%s_%s.tar.gz"%(save_file.split("_")[0],task_id,mission_id,action_id,action_name) ### format : {DATE}_{TASK_ID}_{MISSION_ID}_{ACTION_ID}_{ACTION_NAME}.tar
-                    # destination = "%s/%s"%(PATH_ABORT,destination_file_name)
-                    # printLog("[save_record_partial] [%s] -> [%s]"%(source_file,destination))
+            success = True
+            resp = self.call_save_action()
+            if resp == None or not resp.success : success = False
+            else:
+                save_file = resp.message.split(":")[-1].replace(" ","").split(".tar")[0]+".tar.gz"
+                ### move from bag_packing to PATH_ABORT
+                save_file_path = "%s/%s"%(PATH_BAG_PACKING_SAVE,save_file)
+                self.add_previous_bags(save_file, save_file_path)
 
-                    self.add_previous_bags(save_file, source_file)
-                    # self.check_path(destination,REFERENCE_DELETE_ABORT_FILE,is_day=True)
-                    # os.rename(source_file,destination) ## move /home/syscon/.ros/bags/savebag -> /home/syscon/ROS_DB/sp_task/bags/abort
-                    success = True
+                source_file = "%s/%s"%(PATH_BAG_PACKING_TEMP, save_file)
+                # destination_file_name = "%s_%s_%s_%s_%s.tar.gz"%(save_file.split("_")[0],task_id,mission_id,action_id,action_name) ### format : {DATE}_{TASK_ID}_{MISSION_ID}_{ACTION_ID}_{ACTION_NAME}.tar
+                # destination = "%s/%s"%(PATH_ABORT,destination_file_name)
+                # printLog("[save_record_partial] [%s] -> [%s]"%(source_file,destination))
+
+                # self.check_path(destination,REFERENCE_DELETE_ABORT_FILE,is_day=True)
+                # os.rename(source_file,destination) ## move /home/syscon/.ros/bags/savebag -> /home/syscon/ROS_DB/sp_task/bags/abort
+                success = True
 
             return success
 
@@ -91,7 +92,7 @@ class TaskRecorder:
         thread_temp.start()
 
 
-    def add_previous_bags(self, save_file, source_file):
+    def add_previous_bags(self, save_file, save_file_path):
         def get_bags_to_move():
             abort_file_date = save_file.split("_")[0]
             check_extension = (".bag", ".bag.active")
@@ -117,49 +118,32 @@ class TaskRecorder:
 
         try:
             check_path_exists()
-            if self.last_abort_action is not None:
-                new_abort_action = save_file.split(".tar.gz")[0]
-
-                if self.last_abort_action != new_abort_action:
-                    if len(os.listdir(PATH_BAG_PACKING_PREVIOUS)) != 0:
-                        os.system("cd %s && rm *"%PATH_BAG_PACKING_PREVIOUS)
-                    # for file in os.listdir(PATH_BAG_PACKING_PREVIOUS): os.unlink(file)
-
-
-                    bag_list = get_bags_to_move()
-                    for bag in bag_list:
-                        src = "%s/%s"%(PATH_BAG_PACKING_DIR, bag)
-                        dst = "%s/%s"%(PATH_BAG_PACKING_PREVIOUS, bag)
-                        shutil.copy(src, dst)
-                    self.last_abort_action = new_abort_action
-
-                else:
-                    if new_abort_action == self.first_abort_action: return
-
-            else: #self.last_abort_action is None:
+            if self.last_abort_action is None:
                 self.last_abort_action = save_file.split(".tar.gz")[0]
-                self.first_abort_action = copy.deepcopy(self.last_abort_action)
+                self.first_abort_action = self.last_abort_action
                 return
 
+            new_abort_action = save_file.split(".tar.gz")[0]
+            if self.last_abort_action == new_abort_action:
+                if new_abort_action == self.first_abort_action: return
 
-            bag_dir_cmp = "%s/%s"%(PATH_BAG_PACKING_TEMP, save_file)
-            os.rename(source_file, bag_dir_cmp)
+            else: # self.last_abort_action != new_abort_action:
+                os.system("rm -rf %s/*"%PATH_BAG_PACKING_PREVIOUS)
 
-            with tarfile.open(bag_dir_cmp, 'r:gz') as tr:
-                tr.extractall(PATH_BAG_PACKING_TEMP)
+                bag_list = get_bags_to_move()
+                for bag in bag_list:
+                    src = "%s/%s"%(PATH_BAG_PACKING_DIR, bag)
+                    dst = "%s/%s"%(PATH_BAG_PACKING_PREVIOUS, bag)
+                    shutil.copy(src, dst)
+                self.last_abort_action = new_abort_action
 
-            bag_dir_unpacked = bag_dir_cmp.replace(".tar.gz", "")
-            os.remove(bag_dir_cmp)
+            temp_tar_dir = "%s/%s"%(PATH_BAG_PACKING_TEMP, save_file.replace(".tar.gz", ""))
+            os.mkdir(temp_tar_dir)
 
-            # copy_tree(PATH_BAG_PACKING_PREVIOUS, bag_dir_unpacked)
-            # shutil.copytree(PATH_BAG_PACKING_PREVIOUS, bag_dir_unpacked+"/previous_bags")
-            os.system("cp -r %s %s"%(PATH_BAG_PACKING_PREVIOUS, bag_dir_unpacked))
-
-            with tarfile.open(bag_dir_cmp, 'w:gz') as tr:
-                tr.add(bag_dir_unpacked, arcname=os.path.basename(bag_dir_unpacked))
-
-            os.rename(bag_dir_cmp, source_file)
-            shutil.rmtree(bag_dir_unpacked)
+            with tarfile.open(temp_tar_dir+".tar.gz", 'w:gz') as tr:
+                tr.add(save_file_path, arcname=os.path.basename(save_file_path))
+                tr.add(PATH_BAG_PACKING_PREVIOUS, arcname=os.path.basename(PATH_BAG_PACKING_PREVIOUS))
+            shutil.rmtree(temp_tar_dir)
 
         except Exception as e:
             rospy.logerr("[Task_recorder] Error %s", str(e))
